@@ -12,8 +12,12 @@ Group Project demonstrating knowledge of:
 ## Install
 
 ```
-yarn
+yarn init -y
+yarn add express handlebars
+```
+
+## Database 
 yarn knex migrate:latest
 yarn knex seed:run
 yarn dev
-```
+
