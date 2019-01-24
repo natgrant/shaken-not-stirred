@@ -17,7 +17,8 @@ yarn add express handlebars
 ```
 
 ## Database 
+```
 yarn knex migrate:latest
 yarn knex seed:run
 yarn dev
-
+```
