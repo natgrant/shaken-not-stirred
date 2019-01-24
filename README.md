@@ -1,15 +1,13 @@
-# Boilerplate: Knex.js
+# Shaken Not Stirred
 
-Phase 1 boilerplate project with:
+Group Project demonstrating knowledge of:
 
- - Express
- - Knex
- - SQLite3
- - Express Handlebars
- - body-parser
- - Jest
- - nodemon
-
+- Express
+- Knex
+- SQLite3
+- Express Handlebars
+- Jest
+- nodemon
 
 ## Install
 
@@ -19,6 +17,3 @@ yarn knex migrate:latest
 yarn knex seed:run
 yarn dev
 ```
-
-Be sure to check out the other npm scripts too.
-

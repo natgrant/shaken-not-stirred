@@ -7,12 +7,9 @@
     "knex": "knex",
     "dev": "nodemon index",
     "start": "node index",
-    "test": "jest"
+    "test": "jest --watch --noStackTrace"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dev-academy-challenges/boilerplate-knex.git"
-  },
+  "repository": "git+https://github.com/dev-academy-challenges/boilerplate-knex.git",
   "author": "EDA",
   "license": "ISC",
   "bugs": {
