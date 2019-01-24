@@ -9,19 +9,23 @@ router.get("/", (req, res) => {
 });
 
 router.get("/list", (req, res) => {
+  db.getIngredients()
+    .then(ingredients => {
+      console.log(ingredients)
+      res.render('drinksList', { ingredients, layout: 'show' })
+    })
+    .catch(err => {
+      res.status(500).send("DATABASE ERROR: " + err.message);
+    })
+})
+
+//TODO: result route
+router.post("/list/result", (req, res) => {
+  let item = req.body
+  console.log(item)
+
   res.render("drinksList", { layout: "show" })
 })
 
-
-// .catch(err => {
-//   res.status(500).send("DATABASE ERROR: " + err.message);
-// });
-
-
-//TODO: drinks list route
-
-//TODO: result route
-
-//Edit route??
 
 module.exports = router;

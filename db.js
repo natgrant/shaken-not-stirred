@@ -1,10 +1,18 @@
 const config = require("./knexfile").development;
 const database = require("knex")(config);
 
-// module.exports = {
-//   getUser: getUser,
-//   getUsers: getUsers
-// }
+module.exports = {
+    checkedItem,
+    getIngredients
+}
+
+function checkedItem(db = database) {
+    return db('ingredients').select()
+}
+
+function getIngredients(db = database) {
+    return db('ingredients').select()
+}
 
 // function getUsers (db = connection) {
 //   return db('users').select()

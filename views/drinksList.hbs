@@ -8,11 +8,16 @@
 
 
 {{!-- TODO: change partials to match table --}}
-{{!-- {{#each ingredient}} --}}
+{{!-- {{ingredients.ing}} --}}
 <h2>Ingredient List</h2>
-<div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="customCheck1" value="true">
-    <label class="custom-control-label" for="customCheck1">{{item}}item</label>
-</div>
-{{!-- {{/each}} --}}
-<input class="btn btn-primary" type="submit" value="Submit">
+{{#each ingredients}}
+<form action="/list" method="post" enctype="multipart/form-data">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="{{id}}" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            {{ing}}
+        </label>
+        {{/each}}
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+</form>
