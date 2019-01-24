@@ -21,6 +21,7 @@
     "express-handlebars": "^3.0.0",
     "knex": "^0.15.2",
     "nodemon": "^1.18.3",
+    "postinstall": "^0.4.2",
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
