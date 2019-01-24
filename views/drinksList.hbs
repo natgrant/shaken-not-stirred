@@ -1,5 +1,18 @@
 {{!-- TODO: add ingredients to select here - page will render on the 'show view' --}}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">SHAKEN NOT STIRRED</h1>
+        <p class="lead">Choose your poison</p>
+    </div>
+</div>
+
+
+{{!-- TODO: change partials to match table --}}
+{{!-- {{#each ingredient}} --}}
+<h2>Ingredient List</h2>
 <div class="custom-control custom-checkbox">
     <input type="checkbox" class="custom-control-input" id="customCheck1">
-    <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+    <label class="custom-control-label" for="customCheck1">{{item}}item</label>
 </div>
+{{!-- {{/each}} --}}
+<input class="btn btn-primary" type="submit" value="Submit">
