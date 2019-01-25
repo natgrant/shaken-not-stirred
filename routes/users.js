@@ -24,7 +24,7 @@ router.get("/result", (req, res) => {
 
 //TODO: result route
 router.post("/list", (req, res) => {
-  let item = req.body.value
+  let item = req.body
   console.log(item)
   db.submitIngredients(item)
     .then(() => {

@@ -4,7 +4,8 @@ const database = require("knex")(config);
 module.exports = {
     checkedItem,
     getIngredients,
-    submitIngredients
+    submitIngredients,
+    matches
 }
 
 function checkedItem(db = database) {
@@ -15,12 +16,16 @@ function getIngredients(db = database) {
     return db('ingredients').select()
 }
 
-function submitIngredients(value, db = database) {
-    // return db('ingredients')
+function submitIngredients(db = database) {
+    return db('ingredients')
+
+}
 
 
-
-
+function matches(id, db = database) {
+    return db('drinks')
+        .join('ingredients', 'drinks.ing_id', 'ingredients.id')
+        .select('drinks.drink_id', 'drinks.name', 'drinks.ing_id', 'ingredients.ing')
 }
 
 // function getUsers (db = connection) {
