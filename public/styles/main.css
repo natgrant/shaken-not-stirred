@@ -1,5 +1,6 @@
 body {
   background-color: #9effcc;
+  font-family: "Lato";
 }
 
 .jumbotron {
@@ -14,4 +15,17 @@ body {
 
 .jumbotron p {
   font-family: "Lato";
+}
+
+.restricted {
+  margin-top: 10%
+}
+
+h2 {
+  font-weight: 700;
+  color:#133337
+}
+
+.ingredientList {
+  margin-top: 5rem;
 }

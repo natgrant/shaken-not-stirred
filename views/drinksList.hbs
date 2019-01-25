@@ -1,7 +1,7 @@
 {{!-- TODO: add ingredients to select here - page will render on the 'show view' --}}
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">SHAKEN NOT STIRRED</h1>
+        <h1 class="display-4"><i class="fas fa-cocktail"></i>SHAKEN NOT STIRRED</h1>
         <p class="lead">Choose your poison</p>
     </div>
 </div>
@@ -9,15 +9,18 @@
 
 {{!-- TODO: change partials to match table --}}
 {{!-- {{ingredients.ing}} --}}
-<h2>Ingredient List</h2>
-{{#each ingredients}}
-<form action="/list" method="post" enctype="multipart/form-data">
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="{{id}}" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-            {{ing}}
-        </label>
-        {{/each}}
-        <input class="btn btn-primary" type="submit" value="Submit">
-    </div>
-</form>
+<div class="ingredientList">
+    <h2>PICK YOUR INGREDIENTS:</h2>
+    {{#each ingredients}}
+    <form action="/list" method="post" enctype="multipart/form-data">
+        <div class="form-check ml-5">
+            <input class="form-check-input" type="checkbox" value="{{id}}" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                {{ing}}
+            </label>
+            {{/each}}
+            <br>
+            <input class="btn btn-primary mt-5" type="submit" value="Submit">
+        </div>
+    </form>
+</div>

@@ -11,7 +11,6 @@ router.get("/", (req, res) => {
 router.get("/list", (req, res) => {
   db.getIngredients()
     .then(ingredients => {
-      console.log(ingredients)
       res.render('drinksList', { ingredients, layout: 'show' })
     })
     .catch(err => {
@@ -20,12 +19,17 @@ router.get("/list", (req, res) => {
 })
 
 //TODO: result route
-router.post("/list/result", (req, res) => {
+router.post("/list", (req, res) => {
   let item = req.body
-  console.log(item)
-
-  res.render("drinksList", { layout: "show" })
+  db.submitIngredients(item)
+    .then(() => {
+      res.redirect('/result')
+    })
 })
 
+
+router.get("/result", (req, res) => {
+  res.render("drinkResult", { layout: show })
+})
 
 module.exports = router;
