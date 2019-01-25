@@ -7,6 +7,8 @@ exports.seed = function (knex, Promise) {
         { id: 201, ing: 'Coke' },
         { id: 202, ing: 'Vodka' },
         { id: 203, ing: 'Beer' },
+        { id: 204, ing: 'Vanilla' },
+        { id: 205, ing: 'Lime' },
       ]);
     });
 };

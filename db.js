@@ -14,6 +14,12 @@ function getIngredients(db = database) {
     return db('ingredients').select()
 }
 
+function matches(id, db = database) {
+    return db('drinks')
+        .join('ingredients', 'drinks.ing_id', 'ingredients.id')
+        .select('drinks.drink_id', 'drinks.name', 'drinks.ing_id', 'ingredients.ing')
+}
+
 // function getUsers (db = connection) {
 //   return db('users').select()
 // }
