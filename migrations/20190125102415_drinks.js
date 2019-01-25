@@ -1,13 +1,11 @@
-
-exports.up = function (knex, Promise) {
-    return knex.schema.createTable('drinks', (t) => {
-        t.increments('drink_id').primary()
-        t.string('name')
-
-
-    })
+exports.up = function(knex, Promise) {
+  return knex.schema.createTable("drinks", t => {
+    t.increments("drink_id").primary();
+    t.string("name");
+    t.string("ing_id");
+  });
 };
 
-exports.down = function (knex, Promise) {
-    return knex.schema.dropTable('drinks')
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable("drinks");
 };

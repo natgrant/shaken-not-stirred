@@ -1,6 +1,6 @@
 const express = require("express");
 const hbs = require("express-handlebars");
-const bodyParser = require('body-parser')
+const bodyParser = require("body-parser");
 
 const routes = require("./routes/users");
 
@@ -17,7 +17,8 @@ server.engine(
 );
 server.set("view engine", "hbs");
 server.use(express.static("public"));
-server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 
