@@ -14,7 +14,7 @@
     {{#each ingredients}}
     <form action="/list" method="post" enctype="multipart/form-data">
         <div class="form-check ml-5">
-            <input class="form-check-input" type="checkbox" value="{{id}}" id="defaultCheck1">
+            <input class="form-check-input" type="checkbox" value="{{name}}" id="defaultCheck1" name="ingredients[]">
             <label class="form-check-label" for="defaultCheck1">
                 {{ing}}
             </label>

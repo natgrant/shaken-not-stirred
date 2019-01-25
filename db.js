@@ -3,7 +3,8 @@ const database = require("knex")(config);
 
 module.exports = {
     checkedItem,
-    getIngredients
+    getIngredients,
+    submitIngredients
 }
 
 function checkedItem(db = database) {
@@ -12,6 +13,14 @@ function checkedItem(db = database) {
 
 function getIngredients(db = database) {
     return db('ingredients').select()
+}
+
+function submitIngredients(value, db = database) {
+    // return db('ingredients')
+
+
+
+
 }
 
 // function getUsers (db = connection) {

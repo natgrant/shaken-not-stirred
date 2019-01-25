@@ -18,9 +18,14 @@ router.get("/list", (req, res) => {
     })
 })
 
+router.get("/result", (req, res) => {
+  res.render("drinkResult", { layout: 'show' })
+})
+
 //TODO: result route
 router.post("/list", (req, res) => {
-  let item = req.body
+  let item = req.body.value
+  console.log(item)
   db.submitIngredients(item)
     .then(() => {
       res.redirect('/result')
@@ -28,8 +33,5 @@ router.post("/list", (req, res) => {
 })
 
 
-router.get("/result", (req, res) => {
-  res.render("drinkResult", { layout: show })
-})
 
 module.exports = router;
