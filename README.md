@@ -22,3 +22,8 @@ yarn knex migrate:latest
 yarn knex seed:run
 yarn dev
 ```
+## Todos
+
+- [x] Setup boilerplate
+- [x] Commit to GitHub
+- [x] Present to class
